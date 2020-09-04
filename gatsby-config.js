@@ -5,8 +5,11 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'ZachThomas.me',
+  },
   plugins: [
+    'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

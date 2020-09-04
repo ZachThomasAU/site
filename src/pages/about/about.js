@@ -1,8 +1,9 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import styles from "./about.module.css"
 import Layout from "../../components/layout"
-import Header from "../../components/header"
+// import Header from "../../components/header"
 
 console.log(styles)
 
@@ -16,10 +17,10 @@ const User = props => (
   </div>
 )
 
-export default function About() {
+export default function About({data}) {
   return (
     <Layout>
-      <Header headerText="About" />
+      <h1>About {data.site.siteMetadata.title} </h1>
       <p>This is a site that doesn't do much for now.</p>
       <User
         username="Zach Thomas"
@@ -29,3 +30,13 @@ export default function About() {
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
