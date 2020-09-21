@@ -6,21 +6,22 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'ZachThomas.me',
+    title: "ZachThomas.me",
   },
   plugins: [
-    'gatsby-plugin-emotion',
+    "gatsby-transformer-remark",
+    "gatsby-plugin-emotion",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'src',
+        name: "src",
         path: `src/`,
       },
     },
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: 'src/utils/typography',
+        pathToConfigModule: "src/utils/typography",
       },
     },
   ],
