@@ -24,7 +24,8 @@
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19",
-    "typography-theme-kirkham": "^0.16.19"
+    "typography-theme-kirkham": "^0.16.19",
+    "yarn": "^1.22.5"
   },
   "devDependencies": {
     "prettier": "2.1.0"
