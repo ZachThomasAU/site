@@ -27,7 +27,7 @@ export default function Layout({ children }) {
   )
 
   return (
-    <div 
+    <div
       css={css`
         margin: 0 auto;
         max-width: 700px;
@@ -37,10 +37,10 @@ export default function Layout({ children }) {
     >
       <header>
         <Link to="/" style={{ textShadow: "none", backgroundImage: "none" }}>
-          <h3  
-            css={ css`
+          <h3
+            css={css`
               display: inline;
-              marginBottom: ${rhythm(2)};
+              marginbottom: ${rhythm(2)};
               font-style: normal;
             `}
           >
