@@ -24,5 +24,17 @@ module.exports = {
         pathToConfigModule: "src/utils/typography",
       },
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "GatsbyJS",
+        short_name: "GatsbyJS",
+        start_url: "/",
+        background_colour: "#6b37bf",
+        theme_colour: "#6b37bf",
+        display: "standalone",
+        icon: "src/images/icon.png",
+      },
+    },
   ],
 }
