@@ -27,8 +27,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "GatsbyJS",
-        short_name: "GatsbyJS",
+        name: "ZacharyThomas.me",
+        short_name: "ZacharyThomas.me",
         start_url: "/",
         background_colour: "#6b37bf",
         theme_colour: "#6b37bf",
@@ -36,5 +36,6 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
+    "gatsby-plugin-offline",
   ],
 }
