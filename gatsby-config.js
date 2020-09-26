@@ -6,7 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: "ZachThomas.me",
+    title: "ZacharyThomas.me",
+    description:
+      "Zach Thomas's personal website, webapp and blog! Find all things Zach Thomas related here",
+    author: "Zachary Thomas",
   },
   plugins: [
     "gatsby-transformer-remark",
@@ -37,5 +40,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-offline",
+    "gatsby-plugin-react-helmet",
   ],
 }
