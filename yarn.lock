@@ -12544,6 +12544,14 @@ typography-theme-kirkham@^0.16.19:
     gray-percentage "^2.0.0"
     typography-breakpoint-constants "^0.16.19"
 
+typography-theme-lincoln@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-lincoln/-/typography-theme-lincoln-0.16.19.tgz#912367859a864e59672276c0e23644125c200400"
+  integrity sha512-cZo/5JIHOBnycN5FRaZaKkWtDWyI69GQq2D7BdZLk67P+QDd0EJ6Y69P0dbpCeHXwPsaW++s8NW2xzcIoRSsxQ==
+  dependencies:
+    gray-percentage "^2.0.0"
+    typography-breakpoint-constants "^0.16.19"
+
 typography@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography/-/typography-0.16.19.tgz#092bf30a5a47495c955b54f40d3b55a7a9f28e8a"

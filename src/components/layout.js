@@ -7,9 +7,7 @@ import { rhythm } from "../utils/typography"
 
 const ListLink = props => (
   <li style={{ display: "inline-block", marginRight: "1rem" }}>
-    <Link to={props.to} style={{ textShadow: "none" }}>
-      {props.children}
-    </Link>
+    <Link to={props.to}>{props.children}</Link>
   </li>
 )
 
