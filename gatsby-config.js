@@ -10,6 +10,7 @@ module.exports = {
     description:
       "Zach Thomas's personal website, webapp and blog! Find all things Zach Thomas related here",
     author: "Zachary Thomas",
+    siteUrl: "https://zacharythomas.me",
   },
   plugins: [
     "gatsby-transformer-remark",
@@ -43,7 +44,14 @@ module.exports = {
         legacy: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        configFile: "robots-txt.config.js",
+      },
+    },
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
   ],
 }
