@@ -11,10 +11,32 @@ export default function Articles(data) {
   console.log(data.data)
   return (
     <Layout>
-      <SEO title="Articles - ZacharyThomas.me" />
+      <SEO title="Blog" />
       <div>
-        <Header headerText="Articles" />
-        <p>This is a list of all the articles on this site</p>
+        <Header headerText="Blog" />
+        <p>I'm Zach Thomas, and you're on my blog! </p>
+        <p>
+          I started this blog as a way to keep track of a challenge I made to
+          myself while sitting at home during the COVID-19 Pandemic back in 2020
+          - to write something new every single day.
+        </p>
+        <p>
+          Since then its grown to do literally nothing else. It's still the
+          start of the blog's life, thanks for coming by to visit in its
+          infancy!
+        </p>
+        <p>
+          I'm an Australian, and so all posts are written in Australian English.
+          Favourite is not a typo, and neither is Gaol. Regardless, I sometimes
+          use 'z' instead of 's' like an American, so please forgive me for
+          writing 'realize' on occasion. Emails/Tweets correcting my
+          <i> Americanized</i> spelling are encouraged, emails correcting my
+          Australian spelling are not.
+        </p>
+        <p>
+          Feedback is welcome, but responses are not prompt. I promise I read
+          everything that is sent to me, and I'll get back to you eventually.
+        </p>
         <h4>{data.data.allMarkdownRemark.totalCount} Posts</h4>
         {data.data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
