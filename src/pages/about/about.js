@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import styles from "./about.module.css"
 import Layout from "../../components/layout"
 // import Header from "../../components/header"
+import SEO from "../../components/seo"
 
 console.log(styles)
 
@@ -17,9 +18,10 @@ const User = props => (
   </div>
 )
 
-export default function About({data}) {
+export default function About({ data }) {
   return (
     <Layout>
+      <SEO title="About ZacharyThomas.me" />
       <h1>About {data.site.siteMetadata.title} </h1>
       <p>This is a site that doesn't do much for now.</p>
       <User

@@ -5,11 +5,13 @@ import { rhythm } from "../utils/typography"
 
 import Layout from "../components/layout"
 import Header from "../components/header"
+import SEO from "../components/seo"
 
 export default function Articles(data) {
   console.log(data.data)
   return (
     <Layout>
+      <SEO title="Articles - ZacharyThomas.me" />
       <div>
         <Header headerText="Articles" />
         <p>This is a list of all the articles on this site</p>
