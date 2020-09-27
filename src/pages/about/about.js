@@ -21,7 +21,7 @@ const User = props => (
 export default function About({ data }) {
   return (
     <Layout>
-      <SEO title="About ZacharyThomas.me" />
+      <SEO title="About" />
       <h1>About {data.site.siteMetadata.title} </h1>
       <p>This is a site that doesn't do much for now.</p>
       <User
