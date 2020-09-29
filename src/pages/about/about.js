@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 import styles from "./about.module.css"
 import Layout from "../../components/layout"
@@ -10,7 +11,11 @@ console.log(styles)
 
 const User = props => (
   <div className={styles.user}>
-    <img src={props.avatar} className={styles.avatar} alt="user's avatar" />
+    <Img
+      fixed={props.avatar}
+      className={styles.avatar}
+      alt="photo of Zach Thomas"
+    />
     <div className={styles.description}>
       <h2 className={styles.username}>{props.username}</h2>
       <p className={styles.excerpt}>{props.excerpt}</p>
@@ -26,7 +31,7 @@ export default function About({ data }) {
       <p>This is a site that doesn't do much for now.</p>
       <User
         username="Zach Thomas"
-        avatar="https://avatars.githubusercontent.com/ZachThomasAU"
+        avatar={data.file.childImageSharp.fixed}
         excerpt="Hi, I'm Zach Thomas. I made the site!"
       />
     </Layout>
@@ -38,6 +43,13 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    file(relativePath: { eq: "images/ZachThomasAU.jpg" }) {
+      childImageSharp {
+        fixed {
+          src
+        }
       }
     }
   }
