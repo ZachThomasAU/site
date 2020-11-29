@@ -13,7 +13,19 @@ module.exports = {
     siteUrl: "https://zacharythomas.me",
   },
   plugins: [
-    "gatsby-transformer-remark",
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-katex",
+            options: {
+              strict: "ignore",
+            },
+          },
+        ],
+      },
+    },
     "gatsby-plugin-emotion",
     {
       resolve: "gatsby-source-filesystem",
