@@ -46,8 +46,8 @@ module.exports = {
         name: "ZacharyThomas.me",
         short_name: "ZacharyThomas.me",
         start_url: "/",
-        background_color: "#6b37bf",
-        theme_color: "#6b37bf",
+        background_color: "#494d59",
+        theme_color: "#494d59",
         display: "standalone",
         icon: "src/images/icon.png",
         icon_options: {
