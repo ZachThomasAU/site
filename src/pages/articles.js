@@ -8,7 +8,6 @@ import Header from "../components/header"
 import SEO from "../components/seo"
 
 export default function Articles(data) {
-  console.log(data.data)
   return (
     <Layout>
       <SEO title="Blog" />

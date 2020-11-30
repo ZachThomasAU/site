@@ -1,13 +1,12 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
+import {InlineMath, BlockMath} from "react-katex"
 
 import { rhythm } from "../utils/typography"
 // import layoutStyles from "./layout.module.css"
 
 import "katex/dist/katex.min.css"
-import "katex/dist/katex.mjs"
-import "katex/dist/contrib/auto-render.mjs"
 
 const ListLink = props => (
   <li style={{ display: "inline-block", marginRight: "1rem" }}>
