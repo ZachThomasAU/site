@@ -34,6 +34,7 @@
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
     "react-katex": "^2.0.2",
+    "react-router-dom": "^5.2.0",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
     "typography-theme-fairy-gates": "^0.16.19",
