@@ -99,8 +99,8 @@ export default function DayOne(data) {
       </p>
       <p>
         The mass of 1 unit of fuel is 1. Here's an updated tool calculating the
-        total fuel requirement, including the added weight of the fuel, given
-        some mass.
+        total fuel requirement, accounting for the added weight of the fuel,
+        given some mass.
       </p>
       <form>
         <label>
@@ -116,6 +116,9 @@ export default function DayOne(data) {
       </form>
       The necessary fuel for that mass is: {fuel2}
       <br /> <br />
+      Remember, we need to work out the total fuel requirement given the masses
+      of all the modules provided in the{" "}
+      <a href="/advent2019/1.txt">puzzle input</a>.
       <button onClick={doPartTwo}>
         This button will calculate the total fuel requirement, including the
         extra weight from the added fuel.
