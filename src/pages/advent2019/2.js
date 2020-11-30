@@ -127,7 +127,7 @@ export default function DayOne(data) {
       <br />
       Noun is: {noun}, Verb is: {verb}
       <p>
-        The value we need to calculate the slingshot is 100 * the noun, + the
+        The value we need to calculate the slingshot is 100 * the noun + the
         verb. In this case the appropriate answer is {100 * noun + verb}
       </p>
     </Layout>
