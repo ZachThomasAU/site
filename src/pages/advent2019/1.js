@@ -8,6 +8,12 @@ import SEO from "../../components/seo"
 
 import * as fuelCounterUpper from "./fuelCounterUpper"
 
+/**
+ * ---
+ * title: "Advent of Code 2019, Day Two"
+ * date: "2020-11-30"
+ * ---
+ */
 export default function DayOne(data) {
   const [fuel, setFuel] = useState(0)
   const [fuel2, setFuel2] = useState(0)

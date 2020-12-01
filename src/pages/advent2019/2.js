@@ -7,6 +7,12 @@ import SEO from "../../components/seo"
 
 import Intcode from "./intcode"
 
+/**
+ * ---
+ * title: "Advent of Code 2019, Day One"
+ * date: "2020-11-30"
+ * ---
+ */
 export default function DayOne(data) {
   const [GAP, setGAP] = useState("Waiting for Input...")
   const [noun, setNoun] = useState(null)
