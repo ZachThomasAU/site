@@ -15,8 +15,8 @@ import RowanIsDumb from "../../advent2020/runCalculator"
  * ---
  */
 export default function DayOne(data) {
-  const [part1, setPart1] = useState("null")
-  const [part2, setPart2] = useState("null")
+  const [part1, setPart1] = useState(null)
+  const [part2, setPart2] = useState(null)
   const [expenses, setExpenses] = useState(2)
   const [searchValue, setSearchValue] = useState(2020)
   const [answer, setAnswer] = useState(null)
