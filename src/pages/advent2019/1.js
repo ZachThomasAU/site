@@ -10,7 +10,7 @@ import * as fuelCounterUpper from "./fuelCounterUpper"
 
 /**
  * ---
- * title: "Advent of Code 2019, Day Two"
+ * title: "Advent of Code 2019, Day One"
  * date: "2020-11-30"
  * ---
  */
