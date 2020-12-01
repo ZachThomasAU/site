@@ -5,7 +5,7 @@ import Layout from "../../components/layout"
 import Header from "../../components/header"
 import SEO from "../../components/seo"
 
-import Intcode from "./intcode"
+import Intcode from "../../advent2019/intcode"
 
 /**
  * ---

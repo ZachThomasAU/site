@@ -6,7 +6,7 @@ import Layout from "../../components/layout"
 import Header from "../../components/header"
 import SEO from "../../components/seo"
 
-import * as fuelCounterUpper from "./fuelCounterUpper"
+import * as fuelCounterUpper from "../../advent2019/fuelCounterUpper"
 
 /**
  * ---
