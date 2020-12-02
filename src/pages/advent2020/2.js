@@ -16,13 +16,79 @@ export default function DayOne(data) {
   const [part2, setPart2] = useState(0)
 
   const solvePartOne = () => {
-    // const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(part1 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    /*const text = [
+      "1-3 a: abcde",
+      "1-3 b: cdefg",
+      "2-9 c: ccccccccc",
+      "10-12 a: aaaaaaaaaaba",
+    ]*/
+    let valid = 0
+    text.forEach(elem => {
+      if (elem === "") {
+        return
+      }
+      let min = elem.split("-")
+      let max = min[1].split(" ")
+      min = min[0]
+      max = max[0]
+      let search = elem.split(" ")
+      search = search[1][0]
+      let password = elem.split(":")[1]
+
+      for (let i = 0; i < password.length; i++) {
+        let count = 0
+        for (let j = 0; j < password.length; j++) {
+          if (password[i] === password[j]) {
+            count++
+          }
+        }
+        if (password[i] === search && count <= max && count >= min) {
+          //console.log(password, "is valid")
+          valid++
+          break
+        }
+      }
+    })
+
+    setPart1(valid)
   }
 
   const solvePartTwo = () => {
-    // const text = data.data.file.childPlainText.content.split("\n")
-    setPart2(part2 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    /*const text = [
+      "1-3 a: abcde",
+      "1-3 b: cdefg",
+      "2-9 c: ccccccccc",
+      "10-12 a: aaaaaaaaaaba",
+    ]*/
+    let valid = 0
+    text.forEach(elem => {
+      if (elem === "") {
+        return
+      }
+      let min = elem.split("-")
+      let max = min[1].split(" ")
+      min = min[0]
+      //console.log("Min is:", min)
+      max = max[0]
+      let search = elem.split(" ")
+      search = search[1][0]
+      let password = elem.split(":")[1]
+
+      let count = 0
+      if (password[min] === search) {
+        count++
+      }
+      if (password[max] === search) {
+        count++
+      }
+      if (count === 1) {
+        valid++
+      }
+    })
+
+    setPart2(valid)
   }
 
   return (
