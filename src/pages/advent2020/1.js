@@ -145,9 +145,11 @@ export default function DayOne(data) {
       <p>
         Note: this calculator is not very well optimised, and so is{" "}
         <InlineMath math="\Omega(2^n)" />. I do some trivial heuristics if you
-        pick a small expenses value, but otherwise this calculator may take a
-        long time until I either decide to move it over to the server to do some
-        fancy math magic, or can be assed to optimise my JS spaghetti code.
+        pick a small expenses value, or a value that is actually solvable, but
+        otherwise this calculator may take a long time until I either decide to
+        move it over to the server to do some fancy math magic, can be assed to
+        optimise my JS spaghetti code, or just use someone elses much better
+        written combinatorics JS dependency.
       </p>
       <form>
         <label>

@@ -9,19 +9,14 @@ export default function runCalculator(text, expenses, searchValue) {
   let history = []
   let answer = "Could not find value!"
   let found = false
-  const f = function (prefix, chars, history) {
-    if (found) {
+  const f = (prefix, text, history) => {
+    if (found || history.length >= expenses) {
       return
     }
-    if (history.length >= expenses) {
-      return
-    }
-    for (let i = 0; i < chars.length - 1; i++) {
-      const sum = prefix + +chars[i]
-      //console.log("Summing", prefix, "with", chars[i])
-      const newHistory = history.concat([+chars[i]])
+    for (let i = 0; i < text.length - 1; i++) {
+      const sum = prefix + +text[i]
+      const newHistory = history.concat([+text[i]])
       if (sum === +searchValue) {
-        // console.log("MATCH FOUND! EUREKA! History is:", newHistory)
         if (newHistory.length === +expenses) {
           answer = newHistory.reduce((a, b) => {
             return a * b
@@ -30,11 +25,9 @@ export default function runCalculator(text, expenses, searchValue) {
         }
       }
       result.push(sum)
-      f(sum, chars.slice(i + 1), newHistory)
+      f(sum, text.slice(i + 1), newHistory)
     }
   }
   f(0, text, history)
   return answer
 }
-
-function combine(prefix, chars) {}
