@@ -51,8 +51,12 @@ export default function Layout({ children }) {
           </h3>
         </Link>
         <ul style={{ listStyle: "none", float: "right" }}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/adventOfCode">Advent</ListLink>
+          <ListLink to="/" style={{ textShadow: "none" }}>
+            Home
+          </ListLink>
+          <ListLink to="/adventOfCode" style={{ textShadow: "none" }}>
+            Advent
+          </ListLink>
           <ListLink to="/articles">Blog</ListLink>
           <ListLink to="/about/about">About</ListLink>
           <ListLink to="/contact/contact">Contact</ListLink>

@@ -111,7 +111,7 @@ export default function DayOne(data) {
       </p>
       <h2>Part One</h2>
       <p>
-        <a href="/advent2020/1.txt">
+        <a style={{ textShadow: "none" }} href="/advent2020/1.txt">
           The expense report contains a list of expenses
         </a>
         , and they need me to find the product of the two expenses that sum to
