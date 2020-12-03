@@ -140,7 +140,7 @@ export default function DayOne(data) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "pages/advent2019/inputs/1.txt" }) {
+    file(relativePath: { eq: "pages/advent/2019/inputs/1.txt" }) {
       id
       childPlainText {
         content
