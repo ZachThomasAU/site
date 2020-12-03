@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import { BlockMath } from "react-katex"
 import { Helmet } from "react-helmet"
 
-import Layout from "../../components/layout"
-import Header from "../../components/header"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import Header from "../../../components/header"
+import SEO from "../../../components/seo"
 
-import * as fuelCounterUpper from "../../advent2019/fuelCounterUpper"
+import * as fuelCounterUpper from "../../../functions/advent/2019/fuelCounterUpper"
 
 /**
  * ---

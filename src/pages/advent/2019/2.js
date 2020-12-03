@@ -6,7 +6,7 @@ import Layout from "../../../components/layout"
 import Header from "../../../components/header"
 import SEO from "../../../components/seo"
 
-import Intcode from "../../advent2019/intcode"
+import Intcode from "../../../functions/advent/2019/intcode"
 
 /**
  * ---
