@@ -12,13 +12,13 @@ export default function Intcode(input) {
   let pos = 0
 
   while (true) {
-    if (program[pos] == "1") {
+    if (program[pos] === "1") {
       program = one(program, pos)
       pos += 4
-    } else if (program[pos] == "2") {
+    } else if (program[pos] === "2") {
       program = two(program, pos)
       pos += 4
-    } else if (program[pos] == "99") {
+    } else if (program[pos] === "99") {
       return program[0]
     }
     //console.log(program)

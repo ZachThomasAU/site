@@ -14,6 +14,13 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `src/`,
+      },
+    },
+    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
@@ -26,14 +33,8 @@ module.exports = {
         ],
       },
     },
-    "gatsby-plugin-emotion",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "src",
-        path: `src/`,
-      },
-    },
+    "gatsby-transformer-sharp",
+    "gatsby-transformer-plaintext",
     {
       resolve: "gatsby-plugin-typography",
       options: {
@@ -62,12 +63,16 @@ module.exports = {
         configFile: "robots-txt.config.js",
       },
     },
+    {
+      resolve: "gatsby-plugin-theme-ui",
+      options: {
+        preset: require("my-local-preset"),
+      },
+    },
+    "gatsby-plugin-emotion",
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    "gatsby-transformer-plaintext",
-    "gatsby-plugin-react-helmet",
   ],
 }

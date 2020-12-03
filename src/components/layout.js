@@ -1,10 +1,11 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
+/* eslint-disable no-unused-vars */
 import {InlineMath, BlockMath} from "react-katex"
+/* eslint-enable no-unused-vars */
 
 import { rhythm } from "../utils/typography"
-// import layoutStyles from "./layout.module.css"
 
 import "katex/dist/katex.min.css"
 
@@ -51,12 +52,8 @@ export default function Layout({ children }) {
           </h3>
         </Link>
         <ul style={{ listStyle: "none", float: "right" }}>
-          <ListLink to="/" style={{ textShadow: "none" }}>
-            Home
-          </ListLink>
-          <ListLink to="/adventOfCode" style={{ textShadow: "none" }}>
-            Advent
-          </ListLink>
+          <ListLink to="/">Home</ListLink>
+          <ListLink to="/adventOfCode">Advent</ListLink>
           <ListLink to="/articles">Blog</ListLink>
           <ListLink to="/about/about">About</ListLink>
           <ListLink to="/contact/contact">Contact</ListLink>

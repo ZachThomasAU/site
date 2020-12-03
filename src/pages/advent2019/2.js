@@ -38,7 +38,7 @@ export default function DayOne(data) {
         text[1] = noun
         text[2] = verb
         answer = Intcode(text)
-        if (answer == 19690720) {
+        if (answer === 19690720) {
           setVerb(verb)
           setNoun(noun)
           console.log("Job's done. Verb:", verb, "Noun:", noun)
