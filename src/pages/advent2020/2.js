@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
+import { Helmet } from "react-helmet"
 
 import Layout from "../../components/layout"
 import Header from "../../components/header"
@@ -33,7 +34,7 @@ export default function DayOne(data) {
       setCharacter(e.target.value)
     } else if (e.target.name === "password") {
       setPassword(e.target.value)
-    }  else {
+    } else {
       setRule(e.target.value)
     }
   }
@@ -43,7 +44,10 @@ export default function DayOne(data) {
       setNum1(1)
     } else if (e.target.name === "num2" && e.target.value < 1) {
       setNum2(1)
-    } else if (e.target.name === "character" && !e.target.value.match(/^[A-Za-z]+$/)) {
+    } else if (
+      e.target.name === "character" &&
+      !e.target.value.match(/^[A-Za-z]+$/)
+    ) {
       setCharacter("a")
     }
   }
@@ -77,6 +81,9 @@ export default function DayOne(data) {
 
   return (
     <Layout>
+      <Helmet>
+        <body class="advent2020" />
+      </Helmet>
       <SEO title="Advent of Code 2020, Day Two" />
       <Header headerText="Advent of Code 2020, Day Two" />
 
@@ -172,33 +179,59 @@ export default function DayOne(data) {
       </p>
       <form>
         <label>
-          Numeric Value 1: 
-          <input type="number" min="1" name="num1" value={num1} onChange={handleInputChange} onBlur={validateData}/>
+          Numeric Value 1:
+          <input
+            type="number"
+            min="1"
+            name="num1"
+            value={num1}
+            onChange={handleInputChange}
+            onBlur={validateData}
+          />
         </label>
-        <label style={{paddingLeft: 5}}>
-          Numeric Value 2: 
-          <input type="number" min="1" name="num2" value={num2} onChange={handleInputChange} onBlur={validateData}/>
+        <label style={{ paddingLeft: 5 }}>
+          Numeric Value 2:
+          <input
+            type="number"
+            min="1"
+            name="num2"
+            value={num2}
+            onChange={handleInputChange}
+            onBlur={validateData}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Alphabetic Character:
-          <input name="character" maxLength="1" value={character} onChange={handleInputChange} onBlur={validateData}/>
+          <input
+            name="character"
+            maxLength="1"
+            value={character}
+            onChange={handleInputChange}
+            onBlur={validateData}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Password:
-          <input name="password" value={password} onChange={handleInputChange}/>
+          <input
+            name="password"
+            value={password}
+            onChange={handleInputChange}
+          />
         </label>
-        <br/>
+        <br />
         <label>
           Policy:
-          <select name="rule" value={rule} onChange={handleInputChange}>
+          <select name="rule" value={rule} onBlur={handleInputChange}>
             <option value="HighLow">Sled Rental Shop's Corporate Policy</option>
             <option value="XOR">Official Toboggan Corporate Policy</option>
           </select>
         </label>
-        <br/>
-        <button type="button" onClick={validatePassword}>Validate</button>
+        <br />
+        <button type="button" onClick={validatePassword}>
+          Validate
+        </button>
       </form>
       <p>Password is: {isValid}</p>
     </Layout>

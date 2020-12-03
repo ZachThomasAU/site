@@ -68,5 +68,6 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-transformer-plaintext",
+    "gatsby-plugin-react-helmet",
   ],
 }

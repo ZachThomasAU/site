@@ -1,5 +1,14 @@
 html {
   /*background-color: #32353d;*/
+  /*background-image: url("../images/bg.jpg");*/
+  color: #1a1a1a;
+}
+
+body.advent2019 {
+  background-image: url("../images/bg.jpg");
+  color: #ebebeb;
+}
+
+body.advent2020 {
   background-image: url("../images/aoc2020_bg.jpg");
-  color: #383838;
 }

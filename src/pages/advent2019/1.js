@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { BlockMath } from "react-katex"
+import { Helmet } from "react-helmet"
 
 import Layout from "../../components/layout"
 import Header from "../../components/header"
@@ -52,6 +53,9 @@ export default function DayOne(data) {
 
   return (
     <Layout>
+      <Helmet>
+        <body class="advent2019"></body>
+      </Helmet>
       <SEO title="Advent of Code 2019, Day One" />
       <Header headerText="Advent of Code 2019, Day One" />
       <p>
