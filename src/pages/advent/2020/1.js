@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import { InlineMath } from "react-katex"
 import { Helmet } from "react-helmet"
 
-import Layout from "../../components/layout"
-import Header from "../../components/header"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import Header from "../../../components/header"
+import SEO from "../../../components/seo"
 
-import RowanIsDumb from "../../advent2020/runCalculator"
+import RowanIsDumb from "../../../advent2020/runCalculator"
 
 /**
  * ---
@@ -188,7 +188,7 @@ export default function DayOne(data) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "pages/advent2020/inputs/1.txt" }) {
+    file(relativePath: { eq: "pages/advent/2020/inputs/1.txt" }) {
       id
       childPlainText {
         content

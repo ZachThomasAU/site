@@ -65,9 +65,7 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-theme-ui",
-      options: {
-        preset: require("my-local-preset"),
-      },
+      options: {},
     },
     "gatsby-plugin-emotion",
     "gatsby-plugin-offline",

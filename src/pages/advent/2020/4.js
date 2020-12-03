@@ -2,14 +2,14 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import Layout from "../../components/layout"
-import Header from "../../components/header"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import Header from "../../../components/header"
+import SEO from "../../../components/seo"
 
 /**
  * ---
- * title: "Advent of Code 2020, Day Three"
- * date: "2020-12-03"
+ * title: "Advent of Code 2020, Day Four"
+ * date: "2020-12-04"
  * ---
  */
 export default function DayOne(data) {
@@ -31,8 +31,8 @@ export default function DayOne(data) {
       <Helmet>
         <body class="advent2020" />
       </Helmet>
-      <SEO title="Advent of Code 2020, Day Three" />
-      <Header headerText="Advent of Code 2020, Day Three" />
+      <SEO title="Advent of Code 2020, Day Four" />
+      <Header headerText="Advent of Code 2020, Day Four" />
 
       <p>Let's do the thing!</p>
 
@@ -51,7 +51,7 @@ export default function DayOne(data) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "pages/advent2020/inputs/3.txt" }) {
+    file(relativePath: { eq: "pages/advent/2020/inputs/4.txt" }) {
       id
       childPlainText {
         content

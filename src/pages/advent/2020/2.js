@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import Layout from "../../components/layout"
-import Header from "../../components/header"
-import SEO from "../../components/seo"
+import Layout from "../../../components/layout"
+import Header from "../../../components/header"
+import SEO from "../../../components/seo"
 
-import * as PasswordValidator from "../../advent2020/passwordValidator"
+import * as PasswordValidator from "../../../advent2020/passwordValidator"
 import { InlineMath } from "react-katex"
 
 /**
