@@ -40,7 +40,7 @@ export default function Layout({ children }) {
       `}
     >
       <header>
-        <Link to="/" style={{ textShadow: "none", backgroundImage: "none" }}>
+        <Link to="/" style={{ backgroundImage: "none" }}>
           <h3
             css={css`
               display: inline;

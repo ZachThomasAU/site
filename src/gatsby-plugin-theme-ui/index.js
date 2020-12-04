@@ -1,4 +1,4 @@
-export const theme = {
+export default {
   breakpoints: ["40em", "52em", "64em"],
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fonts: {
@@ -18,11 +18,11 @@ export const theme = {
     heading: 1.125,
   },
   colors: {
-    text: "#000",
-    background: "#fff",
-    primary: "#07c",
-    secondary: "#30c",
-    muted: "#f6f6f6",
+    text: "hsl(210,50%,96%)",
+    background: "#222639",
+    primary: "#b9f",
+    secondary: "#e9f",
+    muted: "#dce2e8",
   },
   text: {
     heading: {
