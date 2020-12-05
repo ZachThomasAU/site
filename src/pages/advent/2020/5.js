@@ -21,12 +21,12 @@ export default function DayOne(data) {
   const [seat, setSeat] = useState("FFFFFFFLLL")
   const [seatID, setSeatID] = useState(null)
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const val = e.target.value
     const validR = ["F", "B"]
     const validC = ["L", "R"]
-    let allow = true 
-    for (let i=0; i < val.length; i++) {
+    let allow = true
+    for (let i = 0; i < val.length; i++) {
       if (i < 7 && !validR.includes(val[i])) {
         allow = false
       }
@@ -104,7 +104,8 @@ export default function DayOne(data) {
         row, multiplied by 8, plus the decimal value of the column. Or:
         <BlockMath math="r * 8 + c" />
         Wait... That's just the base-10 value of the whole string! So the seatID
-        is actually just the decimal value of the whole binary number. Sneaky!
+        is actually just the decimal representation of the whole binary number.
+        Sneaky!
       </p>
 
       <h2>Part One</h2>
@@ -128,7 +129,7 @@ export default function DayOne(data) {
         front and very back of the plane, and so our missing seat must be the
         seat that does not appear on the flight manifest, and that is also not
         at the beginning or the end of the plane. You can reveal which seat is
-        ours by pressing the button below. 
+        ours by pressing the button below.
       </p>
       <button type="button" onClick={solvePartTwo}>
         Reveal Answer to Part Two
@@ -140,17 +141,24 @@ export default function DayOne(data) {
         Humans aren't robots you know! I made a little web app where you can put
         your seat number into the form below, and it will return what seat
         number (SeatID) that seat is. Lets hope the SeatIDs are also printed on
-        the aircraft. 
+        the aircraft.
       </p>
       <form>
         <label>
-          Seat number: {" "}
-          <input name="seat" value={seat} onChange={handleInputChange} maxLength="10"/>
-          {" "} (In binary space partition format)
+          Seat number:{" "}
+          <input
+            name="seat"
+            value={seat}
+            onChange={handleInputChange}
+            maxLength="10"
+          />{" "}
+          (In binary space partition format)
         </label>
-        <br/>
-        <button type="button" onClick={calcSeatID}>Convert</button>
-        <br/>
+        <br />
+        <button type="button" onClick={calcSeatID}>
+          Convert
+        </button>
+        <br />
         SeatID: {seatID}
       </form>
     </Layout>
