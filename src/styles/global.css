@@ -1,16 +1,12 @@
-/*
-html {
-  background-color: #32353d;
+.advent2019 {
   background-image: url("../images/bg.jpg");
-  color: #1a1a1a;
 }
 
-body.advent2019 {
-  background-image: url("../images/bg.jpg");
-  color: #ebebeb;
-}
-
-body.advent2020 {
+.advent2020 {
   background-image: url("../images/aoc2020_bg.jpg");
 }
-*/
+
+.advent2020 a {
+  color: rgb(230,59,25);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, rgb(230,59,25) 1px, rgb(230,59,25) 2px, rgba(0, 0, 0, 0) 2px);
+}
