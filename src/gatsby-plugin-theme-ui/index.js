@@ -69,8 +69,11 @@ export default {
       },
     },
     code: {
-      fontFamily: "monospace",
+      position: "relative",
+      display: "inline-block",
+      fontFamily: '"Source Code Pro", monospace',
       fontSize: "inherit",
+      background: "hsla(230,20%,0%,20%)",
     },
     table: {
       width: "100%",

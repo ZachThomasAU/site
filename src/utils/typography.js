@@ -11,6 +11,13 @@ fairyGateTheme.overrideThemeStyles = () => ({
     backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 1px, #b9f 1px, #b9f 2px, rgba(0, 0, 0, 0) 2px);`,
     color: "#b9f",
   },
+  code: {
+    position: "relative",
+    display: "inline-block",
+    fontFamily: '"Source Code Pro", monospace',
+    fontSize: "inherit",
+    background: "hsla(230,20%,0%,20%)",
+  },
 })
 
 const typography = new Typography(fairyGateTheme)
