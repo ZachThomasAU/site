@@ -85,7 +85,7 @@ export function validateValues(text) {
  * into an array of every field and value.
  *
  * E.g. It takes some passport "iyr:1928 cid:150 pid:476113241" and splits it
- * into an array ["iyr1928", "cid:150", "pid476113241"].
+ * into an array ["iyr:1928", "cid:150", "pid:476113241"].
  * @param {Array<String>} text - A batch file containing a number of strings
  *  representing passports.
  * @returns {Array<Array<String>>} An array of passports split by each field.

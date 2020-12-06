@@ -47,6 +47,9 @@ export default function Advent() {
         <li>
           <Link to="/advent/2020/5">Day Five</Link>
         </li>
+        <li>
+          <Link to="/advent/2020/6">Day Six</Link>
+        </li>
       </ol>
       <h3>2019 Advent of Code</h3>
       <ol>
