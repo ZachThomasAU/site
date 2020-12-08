@@ -20,63 +20,12 @@ export default function DayOne(data) {
 
   const solvePartOne = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-
-    setPart1(Scanner.countContainsColour(text, ""))
+    setPart1(Scanner.countContainsColour(text, "shinygold"))
   }
 
   const solvePartTwo = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-    let bags = {}
-    for (let i = 0; i < text.length; i++) {
-      const first = text[i].split(" ")
-      let name = ""
-      let contains = false
-      let count = 0
-      let counting = false
-      let containing = ""
-      for (let j = 0; j < first.length; j++) {
-        if (first[j] === "contain") {
-          bags[name] = {}
-          contains = true
-        } else if (contains === false) {
-          name += first[j]
-        } else {
-          if (first[j] === "bag." || first[j] === "bags.") {
-            containing += "bags"
-            bags[name][containing] = count
-            break
-          } else if (first[j] === "bag," || first[j] === "bags,") {
-            containing += "bags"
-            bags[name][containing] = count
-            containing = ""
-            count = 0
-            counting = false
-          } else if (counting === true) {
-            containing += first[j]
-          } else {
-            if (first[j] === "no") {
-              break
-            }
-            count = first[j]
-            counting = true
-          }
-        }
-      }
-    }
-
-    let ans = 0
-    for (const elem in bags.shinygoldbags) {
-      ans += countBags(elem, bags) * +bags.shinygoldbags[elem]
-    }
-    setPart2(ans)
-  }
-
-  function countBags(bag, bags) {
-    let count = 1
-    for (const elem in bags[bag]) {
-      count += countBags(elem, bags) * +bags[bag][elem]
-    }
-    return count
+    setPart2(Scanner.countInsideColour(text, "shinygold"))
   }
 
   return (
@@ -87,7 +36,18 @@ export default function DayOne(data) {
       <SEO title="Advent of Code 2020, Day Seven" />
       <Header headerText="Advent of Code 2020, Day Seven" />
 
-      <p>Let's do the thing!</p>
+      <p>
+        Normally I fly with airlines that connect my flights for me, to avoid
+        uncomfortable issues like luggage transfers. For some reason I have not
+        done so this time, and so have to transfer my luggage to my connecting
+        flight. This is further complicated by a truly archaic,{" "}
+        <a href="https://www.youtube.com/watch?v=Trju1ACo4PA&feature=youtu.be&ab_channel=Rezmic">
+          Spongebob-esque
+        </a>{" "}
+        aviation regulation mandating that certain colour bags <b>must</b>{" "}
+        contain a specific number of other coloured bags inside them. Truly
+        perverse.
+      </p>
 
       <button type="button" onClick={solvePartOne}>
         Do Part One
