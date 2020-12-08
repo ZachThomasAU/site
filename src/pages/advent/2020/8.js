@@ -6,7 +6,7 @@ import Layout from "../../../components/layout"
 import Header from "../../../components/header"
 import SEO from "../../../components/seo"
 
-import * as Scanner from "../../../functions/advent/2020/customsScanner"
+import * as Fixer from "../../../functions/advent/2020/bootCodeFixer"
 
 /**
  * ---
@@ -19,13 +19,13 @@ export default function DayOne(data) {
   const [part2, setPart2] = useState(0)
 
   const solvePartOne = () => {
-    //const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(part1 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    setPart1(Fixer.getAccumulatorOnRepeat(text))
   }
 
   const solvePartTwo = () => {
-    // const text = data.data.file.childPlainText.content.split("\n")
-    setPart2(part2 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    setPart2(Fixer.fixCorruptedBootcode(text))
   }
 
   return (
