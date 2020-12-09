@@ -45,8 +45,7 @@ export default function DayOne(data) {
           Spongebob-esque
         </a>{" "}
         aviation regulation mandating that certain colour bags <b>must</b>{" "}
-        contain a specific number of other coloured bags inside them. Truly
-        perverse.
+        contain a specific number of other coloured bags inside them.
       </p>
 
       <button type="button" onClick={solvePartOne}>

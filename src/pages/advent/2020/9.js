@@ -6,12 +6,10 @@ import Layout from "../../../components/layout"
 import Header from "../../../components/header"
 import SEO from "../../../components/seo"
 
-import * as Fixer from "../../../functions/advent/2020/bootCodeFixer"
-
 /**
  * ---
- * title: "Advent of Code 2020, Day Eight"
- * date: "2020-12-08"
+ * title: "Advent of Code 2020, Day Nine"
+ * date: "2020-12-09"
  * ---
  */
 export default function DayOne(data) {
@@ -19,13 +17,13 @@ export default function DayOne(data) {
   const [part2, setPart2] = useState(0)
 
   const solvePartOne = () => {
-    const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(Fixer.getAccumulatorOnRepeat(text))
+    //const text = data.data.file.childPlainText.content.split("\n")
+    setPart1(part1 + 1)
   }
 
   const solvePartTwo = () => {
-    const text = data.data.file.childPlainText.content.split("\n")
-    setPart2(Fixer.fixCorruptedBootcode(text))
+    //const text = data.data.file.childPlainText.content.split("\n")
+    setPart2(part2 + 1)
   }
 
   return (
@@ -33,10 +31,10 @@ export default function DayOne(data) {
       <Helmet>
         <body class="advent2020" />
       </Helmet>
-      <SEO title="Advent of Code 2020, Day Eight" />
-      <Header headerText="Advent of Code 2020, Day Eight" />
+      <SEO title="Advent of Code 2020, Day Nine" />
+      <Header headerText="Advent of Code 2020, Day Nine" />
 
-      <p>This is the fixing a game consoles bootcode one</p>
+      <p>Lets Go</p>
 
       <button type="button" onClick={solvePartOne}>
         Do Part One
@@ -53,7 +51,7 @@ export default function DayOne(data) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "pages/advent/2020/inputs/8.txt" }) {
+    file(relativePath: { eq: "pages/advent/2020/inputs/9.txt" }) {
       id
       childPlainText {
         content
