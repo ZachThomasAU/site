@@ -17,13 +17,98 @@ export default function DayOne(data) {
   const [part2, setPart2] = useState(0)
 
   const solvePartOne = () => {
-    //const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(part1 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    /*const text = [
+      35,
+      20,
+      15,
+      25,
+      47,
+      40,
+      62,
+      55,
+      65,
+      95,
+      102,
+      117,
+      150,
+      182,
+      127,
+      219,
+      299,
+      277,
+      309,
+      576,
+    ]*/
+    const preamble = 25
+    let ans
+    let past = []
+    for (let i = 0; i < preamble; i++) {
+      past.push(+text[i])
+    }
+    //console.log(past)
+    for (let i = preamble; i < text.length; i++) {
+      let found = false
+      for (let j = 0; j < past.length; j++) {
+        for (let k = 0; k < past.length; k++) {
+          if (past[j] !== past[k]) {
+            if (past[j] + past[k] === +text[i]) {
+              found = true
+            }
+          }
+        }
+      }
+      if (!found) {
+        ans = text[i]
+        break
+      } else {
+        past.shift()
+        past.push(+text[i])
+      }
+    }
+    setPart1(ans)
   }
 
   const solvePartTwo = () => {
-    //const text = data.data.file.childPlainText.content.split("\n")
-    setPart2(part2 + 1)
+    const text = data.data.file.childPlainText.content.split("\n")
+    const invalid = 18272118
+    const preamble = 25
+    let ans
+    let past = []
+    for (let i = 0; i < preamble; i++) {
+      past.push(+text[i])
+    }
+
+    for (let i = preamble; i < text.length; i++) {
+      let set = []
+      let sum = 0
+      while (sum < invalid) {
+        for (let j = i; j < text.length; j++) {
+          set.push(+text[j])
+          sum += +text[j]
+          if (sum >= invalid) {
+            break
+          }
+        }
+        break
+      }
+      //console.log(sum)
+      if (sum === invalid) {
+        let min = invalid
+        let max = 0
+        for (let j = 0; j < set.length; j++) {
+          if (set[j] < min) {
+            min = set[j]
+          }
+          if (set[j] > max) {
+            max = set[j]
+          }
+        }
+        ans = min + max
+        break
+      }
+    }
+    setPart2(ans)
   }
 
   return (
