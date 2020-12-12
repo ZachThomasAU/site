@@ -11,7 +11,7 @@ export function validateFields(text) {
   let valid = 0
 
   splitPassports(text).forEach(e => {
-    if (e == "") {
+    if (e === "") {
       if (count === 7) {
         valid++
       }
@@ -42,7 +42,7 @@ export function validateValues(text) {
   let valid = 0
 
   splitPassports(text).forEach(e => {
-    if (e == "") {
+    if (e === "") {
       if (count === 7) {
         valid++
       }
@@ -198,6 +198,6 @@ function validatePassportID(val) {
  * @param {number} val - The value to be validated
  * @returns {number} A 1 if valid, void if invalid
  */
-function validateCountryID(val) {
+/*function validateCountryID(val) {
   // This is not required yet
-}
+}*/

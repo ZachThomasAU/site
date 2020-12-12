@@ -43,11 +43,11 @@ export function getGroupYesResponses(text) {
  *   are the number of respondents to that specific question in the group.
  */
 export function createCustomsFormObject(text) {
-  let form = new Object()
+  let form = {}
   let answered = { count: 0 }
   let index = 0
   text.forEach(e => {
-    if (e == "") {
+    if (e === "") {
       form[index] = answered
       index++
       answered = { count: 0 }
