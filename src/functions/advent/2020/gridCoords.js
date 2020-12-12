@@ -1,5 +1,4 @@
-import * as _ from "lodash"
-import { indexOf, isArray } from "lodash"
+import { indexOf, isArray, isEqual, cloneDeep } from "lodash"
 
 /**
  * Takes a list of navigation instructions, and a starting direction, and
@@ -110,83 +109,25 @@ export function waypointNavigator(text, starting) {
  *
  * @param {*} text
  */
-export function partOne(text, target) {
-  let fill = "."
-  if (target === ".") {
-    fill = "_"
-  }
-
-  let plan = []
-  text.forEach(e => {
-    plan.push(e)
-  })
-
+export function partOne(plan) {
   while (true) {
-    let newPlan = []
-    plan.forEach(e => {
-      newPlan.push(e)
-    })
+    let newPlan = cloneDeep(plan)
 
     for (let j = 0; j < newPlan.length; j++) {
       let e = newPlan[j]
       for (let i = 0; i < e.length; i++) {
-        let left = e[i - 1]
-        let right = e[i + 1]
-        let front = newPlan[j - 1]
-        if (front === undefined) {
-          front = new Array(e.length).fill(fill)
-        }
-        let back = newPlan[j + 1]
-        if (back === undefined) {
-          back = new Array(e.length).fill(fill)
-        }
-
         if (e[i] === "L") {
-          if (
-            left !== "#" &&
-            right !== "#" &&
-            front[i - 1] !== "#" &&
-            front[i] !== "#" &&
-            front[i + 1] !== "#" &&
-            back[i - 1] !== "#" &&
-            back[i] !== "#" &&
-            back[i + 1] !== "#"
-          ) {
+          if (scanAdjacent(newPlan, j, i, "#") === 0) {
             plan[j] = plan[j].substr(0, i) + "#" + plan[j].substr(i + 1)
           }
         } else if (e[i] === "#") {
-          let count = 0
-          if (right === "#") {
-            count++
-          }
-          if (left === "#") {
-            count++
-          }
-          if (front[i - 1] === "#") {
-            count++
-          }
-          if (front[i] === "#") {
-            count++
-          }
-          if (front[i + 1] === "#") {
-            count++
-          }
-          if (back[i - 1] === "#") {
-            count++
-          }
-          if (back[i] === "#") {
-            count++
-          }
-          if (back[i + 1] === "#") {
-            count++
-          }
-          if (count >= 4) {
+          if (scanAdjacent(newPlan, j, i, "#") >= 4) {
             plan[j] = plan[j].substr(0, i) + "L" + plan[j].substr(i + 1)
           }
         }
       }
     }
-    if (_.isEqual(plan, newPlan)) {
+    if (isEqual(plan, newPlan)) {
       break
     }
   }
@@ -199,7 +140,6 @@ export function partOne(text, target) {
       }
     }
   })
-
   return count
 }
 
@@ -216,7 +156,7 @@ export function scanAdjacent(plan, row, col, target) {
           count++
         }
       } catch (e) {
-        // plan[i] is undefined, so target cannot be there. Therefore, do nothing.
+        // plan[i] is undefined, so target cannot be there. Do nothing.
       }
     }
   }
@@ -225,8 +165,3 @@ export function scanAdjacent(plan, row, col, target) {
   }
   return count
 }
-
-/**
- *
- */
-function lookNW() {}
