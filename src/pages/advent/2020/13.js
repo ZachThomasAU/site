@@ -6,7 +6,7 @@ import Layout from "../../../components/layout"
 import Header from "../../../components/header"
 import SEO from "../../../components/seo"
 
-import * as Maths from "../../../functions/utils/Math"
+import * as Maffs from "../../../functions/utils/Maffs"
 
 /**
  * ---
@@ -60,7 +60,7 @@ export default function DayOne(data) {
         remainder.push(r)
       }
     }
-    setPart2(Maths.crt(remainder, buses))
+    setPart2(Maffs.crt(remainder, buses))
   }
 
   return (

@@ -1,3 +1,9 @@
+/*!
+ * Zach's Mathematics Package (Maffs) v0.0.1
+ * Copyright 2020 Zachary Thomas
+ * MIT Licence
+ */
+
 /**
  * This is a recursive (read: **slow**) greatest common divisor function.
  * @param {number} a - a number.
