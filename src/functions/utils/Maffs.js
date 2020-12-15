@@ -85,13 +85,15 @@ export function crt(a, n) {
   //FIXME: This still doesn't work for BIG_NUMs. 
   let sum = "0"
   let prod = n.reduce((b, c) => {
-    return b * c
+    return multiply(b.toString(), c.toString())
   })
+
   for (let i = 0; i < a.length; i++) {
+    console.log("Solving x ≡", a[i], "mod", n[i])
     const p = Math.floor(prod / n[i])
     const inv = modInverse(p, n[i]) ? modInverse(p, n[i]) : 1
-    console.log("Sum:", sum)
-    console.log("adding...", a[i] * p * inv)
+    //console.log("Sum:", sum)
+    //console.log("adding...", a[i] * p * inv)
     sum = add(sum, (a[i] * p * inv).toString())
   }
   console.log(sum, prod)
@@ -117,7 +119,6 @@ export function add(str1, str2) {
   let carry = 0
 
   if (str2Len > str1Len) {
-    console.log("Swapping", str1, "with", str2)
     let temp = str2
     str2 = str1 
     str2Len = str2.length
@@ -140,6 +141,59 @@ export function add(str1, str2) {
   }
 
   return sum
+}
+
+/**
+ * This function multiplies VERY large numbers, avoiding JavaScripts erroneous
+ * rounding. This function is not the most performative way to multiply strings,
+ * merely the safest. If you want to add multiply small strings, consider using 
+ * a less operations intense function. 
+ * 
+ * **Note - the numbers you're multiplying must be in string format. Naturally, 
+ * that is how we avoid JS's rounding.**
+ * @param {String} str1 - the first number to be multiplied, preferably the 
+ *  larger.
+ * @param {String} str2 - the second number to be multiplied, preferably the 
+ *  smaller.
+ * @returns {Stirng} the product of the two numbers, as a string. 
+ */
+export function multiply(str1, str2) {
+  let str1Len = str1.length
+  let str2Len = str2.length
+
+  if (str2Len > str1Len) {
+    let temp = str2
+    str2 = str1 
+    str2Len = str2.length
+    str1 = temp
+    str1Len = str1.length
+  }
+
+  let prod = new Array(str1Len).fill("")
+
+  for (let i=0; i<str1Len; i++) {
+    let a = parseInt(str1[str1Len - 1 - i])
+    let carry = 0
+    for (let j=0; j<i; j++) {
+      prod[i] += "0"
+    }
+    console.log("Beginning product", i, "with base of", prod[i])
+    for (let j=0; j<str1Len; j++) {
+      let b = parseInt(str2[str2Len - 1 - j])
+      b = (b) ? b : 1
+      let temp = (a * b + carry).toString()
+      console.log("solving", a, "*", b, "+", carry, "=", temp)
+      let digitSum = temp[temp.length - 1]
+      carry = parseInt(temp.substr(0, temp.length - 1))
+      carry = (carry) ? carry : 0
+      prod[i] = (j === str1Len - 1) ? temp + prod[i]: digitSum + prod[i]
+    }
+    console.log("product", i, "=", prod[i])
+  }
+
+  return prod.reduce((a,b) => {
+    return add(a, b)
+  })
 }
 
 /**
