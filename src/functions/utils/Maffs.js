@@ -60,8 +60,8 @@ export function modInverse(a, m) {
 }
 
 /**
- * **WARNING! THIS FUNCTION SOMETIMES HAS OFF-BY-ONE ERRORS! UNSURE WHAT
- * CAUSES THE ERRORS AT THIS STAGE**
+ * **WARNING! IF THE SUM OF THE SERIES A[i]e[i] IS A BIG_NUM, THEN THIS DOES
+ * NOT WORK (YET...). TUNE BACK LATER TO SEE IF WE HAVE IT FIXED!**
  *
  * This is a slow Chinese Remainder Theorem function. Takes a sequence of
  * remainders, A, and a sequence of moduli, N, and returns some value X such
@@ -82,8 +82,8 @@ export function modInverse(a, m) {
  * exists.
  */
 export function crt(a, n) {
-  //FIXME: I have an off-by-one error, but only sometimes!
-  let sum = 0
+  //FIXME: This still doesn't work for BIG_NUMs. 
+  let sum = "0"
   let prod = n.reduce((b, c) => {
     return b * c
   })
@@ -92,7 +92,75 @@ export function crt(a, n) {
     const inv = modInverse(p, n[i]) ? modInverse(p, n[i]) : 1
     console.log("Sum:", sum)
     console.log("adding...", a[i] * p * inv)
-    sum += a[i] * p * inv
+    sum = add(sum, (a[i] * p * inv).toString())
   }
-  return sum % prod
+  console.log(sum, prod)
+  return modulo(sum, prod)
+}
+
+/**
+ * This function adds VERY large numbers, avoiding JavaScripts erroneous
+ * rounding. This function is not the most performative way to add strings,
+ * merely the safest. If you want to add two small strings, consider using a
+ * less operations intense function. 
+ * 
+ * **Note - the numbers you're adding must be in string format. Naturally, that
+ * is how we avoid JS's rounding.**
+ * @param {String} str1 - the first number to be added, preferably the larger.
+ * @param {String} str2 - the second number to be added, preferably the smaller.
+ * @returns {Stirng} the sum of the two numbers, as a string. 
+ */
+export function add(str1, str2) {
+  let sum = ""
+  let str1Len = str1.length
+  let str2Len = str2.length
+  let carry = 0
+
+  if (str2Len > str1Len) {
+    console.log("Swapping", str1, "with", str2)
+    let temp = str2
+    str2 = str1 
+    str2Len = str2.length
+    str1 = temp
+    str1Len = str1.length
+  }
+
+  for (let i=0; i<str1.length; i++) {
+    let a = parseInt(str1[str1Len - 1 - i])
+    let b = parseInt(str2[str2Len - 1 - i])
+    b = (b) ? b : 0
+    let temp = (carry + a + b).toString()
+    let digitSum = temp[temp.length - 1]
+    carry = parseInt(temp.substr(0, temp.length - 1))
+    carry = (carry) ? carry : 0
+
+    // Zach DO NOT change this! Think about it, you need to add the sum to the
+    // end of the string, so sum += is going to reverse the string!
+    sum = (i === str1Len - 1) ? temp + sum : digitSum + sum
+  }
+
+  return sum
+}
+
+/**
+ * This function finds the remainder of VERY large numbers, avoiding JavaScripts
+ * erroneous rounding. This function is not the most performative way to find
+ * perfrom modular arithmetic on a string, merely the safest. If you want to mod
+ * a small string with a small modulus, consider using a less operations intense 
+ * function. 
+ * 
+ * **Note - the numbers you're computing must be in string format. Naturally, 
+ * that is how we avoid JS's rounding.**
+ * @param {String} str - The number to be operated on. 
+ * @param {String} divisor - The modulus to operate with.
+ * @returns {String} - The congruence of str (mod divisor), as a string. 
+ */
+export function modulo(str, divisor) {
+  let temp = ""
+  for (let i=0; i< str.length; i++) {
+    temp += str[i]
+    let r = temp % divisor
+    temp = r.toString(10)
+  }
+  return temp / 1
 }
