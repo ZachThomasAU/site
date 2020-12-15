@@ -21,7 +21,6 @@ export default function DayOne(data) {
   const solvePartOne = () => {
     const text = data.data.file.childPlainText.content.split("\n")
     //const text = [939, "7,13,x,x,59,x,31,19"]
-    console.log(text)
     const timestamp = +text[0]
     let temp = text[1].split(",")
     let buses = []
@@ -31,32 +30,27 @@ export default function DayOne(data) {
         buses.push(+temp[i])
       }
     }
-    console.log(buses)
     for (let i = 0; i < buses.length; i++) {
       let e = buses[i]
       let time = e * Math.floor(timestamp / e) + e
-      console.log("Bus", buses[i], "can be caught at", time)
       if (time - timestamp < min[0]) {
         min[0] = time - timestamp
         min[1] = e
       }
     }
-    console.log(min)
     setPart1(min[0] * min[1])
   }
 
   const solvePartTwo = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-    //const text = [939, "1789,37,47,1889"]
-    console.log(text[1])
+    //const text = [939, "67,7,59,61"]
     let temp = text[1].split(",")
-    console.log(temp)
     let remainder = []
     let buses = []
     for (let i = 0; i < temp.length; i++) {
       if (temp[i] !== "x") {
         buses.push(+temp[i])
-        let r = (i === 0) ? 0 : +temp[i] - (i % +temp[i])
+        let r = i === 0 ? 0 : +temp[i] - (i % +temp[i])
         remainder.push(r)
       }
     }

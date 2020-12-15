@@ -60,8 +60,8 @@ export function modInverse(a, m) {
 }
 
 /**
- * ** WARNING! THIS FUNCTION SOMETIMES HAS OFF-BY-ONE ERRORS! UNSURE WHAT
- * CAUSES THE ERRORS AT THIS STAGE **
+ * **WARNING! THIS FUNCTION SOMETIMES HAS OFF-BY-ONE ERRORS! UNSURE WHAT
+ * CAUSES THE ERRORS AT THIS STAGE**
  *
  * This is a slow Chinese Remainder Theorem function. Takes a sequence of
  * remainders, A, and a sequence of moduli, N, and returns some value X such
@@ -84,12 +84,14 @@ export function modInverse(a, m) {
 export function crt(a, n) {
   //FIXME: I have an off-by-one error, but only sometimes!
   let sum = 0
-  let prod = n.reduce((a, c) => {
-    return a * c
+  let prod = n.reduce((b, c) => {
+    return b * c
   })
   for (let i = 0; i < a.length; i++) {
     const p = Math.floor(prod / n[i])
     const inv = modInverse(p, n[i]) ? modInverse(p, n[i]) : 1
+    console.log("Sum:", sum)
+    console.log("adding...", a[i] * p * inv)
     sum += a[i] * p * inv
   }
   return sum % prod
