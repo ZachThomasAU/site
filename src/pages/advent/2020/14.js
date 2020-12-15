@@ -41,7 +41,7 @@ export default function DayOne(data) {
             mask[j] = +e[2][j]
           }
         }
-      } else if (e[0].substr(0,3) == "mem") {
+      } else if (e[0].substr(0,3) === "mem") {
         const mem = +e[0].replace(/\D/g, "")
         const val = reverseString(parseInt(e[2]).toString(2))
         for (let j = 0; j < val.length; j++) {
@@ -71,13 +71,6 @@ export default function DayOne(data) {
 
   const solvePartTwo = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-    /*const text = [
-      "mask = 000000000000000000000000000000X1001X",
-      "mem[42] = 100",
-      "mask = 00000000000000000000000000000000X0XX",
-      "mem[26] = 1",
-      "",
-    ]*/
     let program = []
     text.forEach(e => {
       program.push(e.split(" "))
@@ -96,7 +89,7 @@ export default function DayOne(data) {
             mask[j] = e[2][j]
           }
         }
-      } else if (e[0].substr(0,3) == "mem") {
+      } else if (e[0].substr(0,3) === "mem") {
         const mem = reverseString(parseInt(e[0].replace(/\D/g, "")).toString(2))
         const val = parseInt(e[2])
         for (let j = 0; j < mem.length; j++) {
@@ -111,17 +104,14 @@ export default function DayOne(data) {
       }
     }
     let ans = 0
-    for (const e in memory) {
-      ans += memory[e]
+    for (const key in memory) {
+      ans += memory[key]
     }
     setPart2(ans)
   }
 
   function recursiveFunction(bin, val, memory) {
-    let newBin = []
-    bin.forEach(e => {
-      newBin.push(e)
-    })
+    let newBin = bin.slice(0)
     for (let i=0; i<newBin.length; i++) {
       if (newBin[i] === "X") {
         newBin[i] = 0
