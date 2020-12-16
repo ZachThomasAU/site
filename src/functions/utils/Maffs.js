@@ -85,7 +85,9 @@ export function crt(a, n) {
   //FIXME: This still doesn't work for BIG_NUMs. 
   let sum = "0"
   let prod = n.reduce((b, c) => {
+    console.log("Multiplying", b, "with", c)
     return multiply(b.toString(), c.toString())
+    //return b * c
   })
 
   for (let i = 0; i < a.length; i++) {
@@ -113,6 +115,13 @@ export function crt(a, n) {
  * @returns {Stirng} the sum of the two numbers, as a string. 
  */
 export function add(str1, str2) {
+  if (str1 < Number.MAX_SAFE_INTEGER && str2 < Number.MAX_SAFE_INTEGER) {
+    let sum = parseInt(str1) + parseInt(str2)
+    if (sum < Number.MAX_SAFE_INTEGER) {
+      return sum.toString()
+    }
+  }
+
   let sum = ""
   let str1Len = str1.length
   let str2Len = str2.length
@@ -158,6 +167,12 @@ export function add(str1, str2) {
  * @returns {Stirng} the product of the two numbers, as a string. 
  */
 export function multiply(str1, str2) {
+  if (str1 < Number.MAX_SAFE_INTEGER && str2 < Number.MAX_SAFE_INTEGER) {
+    let prod = str1 * str2 
+    if (prod < Number.MAX_SAFE_INTEGER) {
+      return prod.toString()
+    }
+  }
   let str1Len = str1.length
   let str2Len = str2.length
 
@@ -171,24 +186,21 @@ export function multiply(str1, str2) {
 
   let prod = new Array(str1Len).fill("")
 
-  for (let i=0; i<str1Len; i++) {
-    let a = parseInt(str1[str1Len - 1 - i])
+  for (let i=0; i<str2Len; i++) {
+    let a = parseInt(str2[str2Len - 1 - i])
     let carry = 0
     for (let j=0; j<i; j++) {
       prod[i] += "0"
     }
-    console.log("Beginning product", i, "with base of", prod[i])
     for (let j=0; j<str1Len; j++) {
-      let b = parseInt(str2[str2Len - 1 - j])
-      b = (b) ? b : 1
+      let b = parseInt(str1[str1Len - 1 - j])
+      b = (b) ? b : 0
       let temp = (a * b + carry).toString()
-      console.log("solving", a, "*", b, "+", carry, "=", temp)
       let digitSum = temp[temp.length - 1]
       carry = parseInt(temp.substr(0, temp.length - 1))
       carry = (carry) ? carry : 0
       prod[i] = (j === str1Len - 1) ? temp + prod[i]: digitSum + prod[i]
     }
-    console.log("product", i, "=", prod[i])
   }
 
   return prod.reduce((a,b) => {
