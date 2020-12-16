@@ -43,7 +43,7 @@ export default function DayOne(data) {
 
   const solvePartTwo = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-    //const text = [939, "67,7,59,61"]
+    //const text = [939, "1789,37,47,1889"]
     let temp = text[1].split(",")
     let remainder = []
     let buses = []
