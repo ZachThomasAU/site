@@ -51,9 +51,9 @@ export function modularSolutions(r, m, n) {
  * @returns the multiplicative inverse, if one exists.
  */
 export function modInverse(a, m) {
-  a %= m
+  a = modulo(a.toString(), m.toString())
   for (let x = 1; x < m; x++) {
-    if ((a * x) % m === 1) {
+    if (modulo(multiply(a.toString(), x.toString()), m.toString()) === 1) {
       return x
     }
   }
@@ -85,20 +85,15 @@ export function crt(a, n) {
   //FIXME: This still doesn't work for BIG_NUMs. 
   let sum = "0"
   let prod = n.reduce((b, c) => {
-    console.log("Multiplying", b, "with", c)
     return multiply(b.toString(), c.toString())
-    //return b * c
   })
 
   for (let i = 0; i < a.length; i++) {
-    console.log("Solving x ≡", a[i], "mod", n[i])
     const p = Math.floor(prod / n[i])
     const inv = modInverse(p, n[i]) ? modInverse(p, n[i]) : 1
-    //console.log("Sum:", sum)
-    //console.log("adding...", a[i] * p * inv)
-    sum = add(sum, (a[i] * p * inv).toString())
+    const e = multiply(multiply(a[i].toString(), p.toString()), inv.toString())
+    sum = add(sum, e)
   }
-  console.log(sum, prod)
   return modulo(sum, prod)
 }
 
@@ -112,7 +107,7 @@ export function crt(a, n) {
  * is how we avoid JS's rounding.**
  * @param {String} str1 - the first number to be added, preferably the larger.
  * @param {String} str2 - the second number to be added, preferably the smaller.
- * @returns {Stirng} the sum of the two numbers, as a string. 
+ * @returns {String} the sum of the two numbers, as a string. 
  */
 export function add(str1, str2) {
   if (str1 < Number.MAX_SAFE_INTEGER && str2 < Number.MAX_SAFE_INTEGER) {
@@ -222,6 +217,9 @@ export function multiply(str1, str2) {
  * @returns {String} - The congruence of str (mod divisor), as a string. 
  */
 export function modulo(str, divisor) {
+  if (str < Number.MAX_SAFE_INTEGER && divisor < Number.MAX_SAFE_INTEGER) {
+    return str % divisor
+  }
   let temp = ""
   for (let i=0; i< str.length; i++) {
     temp += str[i]
