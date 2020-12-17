@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { Helmet } from "react-helmet"
-import { isEqual } from "lodash"
 
 import Layout from "../../../components/layout"
 import Header from "../../../components/header"
@@ -19,24 +18,8 @@ export default function DayOne(data) {
 
   const solvePartOne = () => {
     const text = data.data.file.childPlainText.content.split("\n")
-    /*const text = [
-      "class: 1-3 or 5-7",
-      "row: 6-11 or 33-44",
-      "seat: 13-40 or 45-50",
-      "",
-      "your ticket:",
-      "7,1,14",
-      "",
-      "nearby tickets:",
-      "7,3,47",
-      "40,4,50",
-      "55,2,20",
-      "38,6,12",
-      ""
-    ]*/
     let rules = []
     let values = []
-    let myTicket
     let nearbyTickets = []
     let errors = []
     let index = 0
@@ -63,7 +46,6 @@ export default function DayOne(data) {
     console.log(rules)
     for (let i = index; i < text.length; i++) {
       if (i === index) {
-        myTicket = text[i + 1].split(",")
         i += 4
       }
       nearbyTickets.push(text[i].split(","))
