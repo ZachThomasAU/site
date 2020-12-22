@@ -18,7 +18,43 @@ export default function DayOne(data) {
 
   const solvePartOne = () => {
     //const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(part1+1)
+    const text = [
+      "0: 4 1 5",
+      "1: 2 3 | 3 2",
+      "2: 4 4 | 5 5",
+      "3: 4 5 | 5 4",
+      '4: "a"',
+      '5: "b"',
+      "",
+      "ababbb",
+      "bababa",
+      "abbbab",
+      "aaabbb",
+      "aaaabbb",
+      "",
+    ]
+    const rules = {}
+    let index = 0
+    for (let i = 0; i < text.length; i++) {
+      const e = text[i]
+      if (e === "") {
+        index = i + 1
+        break
+      }
+      const temp = e.split(/: /)
+      const rule = temp[1].split(/ /)
+      rules[temp[0]] = rule
+    }
+
+    let messages = []
+    for (let i = index; i < text.length - 1; i++) {
+      messages.push(text[i])
+    }
+
+    let valid = []
+    let master = rules["0"]
+    console.log(valid)
+    setPart1(part1 + 1)
   }
 
   const solvePartTwo = () => {
