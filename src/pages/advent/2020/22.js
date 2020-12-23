@@ -129,7 +129,7 @@ export default function DayOne(data) {
 
     // Play the game
     let game = 1
-    let i = 1
+    //let i = 1
     let history = []
     while (cards[0].length > 0 && cards[1].length > 0) {
       const p1 = cards[0]
@@ -195,7 +195,7 @@ export default function DayOne(data) {
   function combat(p1, p2, game) {
     game++
     //console.log("=== Game", game, "===")
-    let i = 1
+    //let i = 1
     let history = []
     while (p1.length > 0 && p2.length > 0) {
       //console.log("-- Round", i, "(Game " + game + ")--")
