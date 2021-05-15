@@ -6,6 +6,8 @@ import Layout from "../../../components/layout"
 import Header from "../../../components/header"
 import SEO from "../../../components/seo"
 
+import * as Maffs from "../../../functions/utils/Maffs"
+
 /**
  * ---
  * title: "Advent of Code 2020, Day Twenty-Five"
@@ -17,8 +19,68 @@ export default function DayOne(data) {
   const [part2, setPart2] = useState(0)
 
   const solvePartOne = () => {
-    //const text = data.data.file.childPlainText.content.split("\n")
-    setPart1(part1+1)
+    /*const text = [
+      5764801,
+      17807724,
+      ""
+    ]*/
+    console.time("I wonder")
+    const text = [
+      335121,
+      363891,
+      ""
+    ]
+    const cardKey = +text[0]
+    const doorKey = +text[1]
+    let subject = 7
+    const mod = 20201227
+
+    // Calculate Card Loop
+    let i = 0
+    let val = 1
+    while (true) {
+      i++
+      val *= subject 
+      val %= mod 
+      if (val === cardKey) {
+        break
+      }
+    }
+    const cardLoop = i
+
+    // Calculate Door Loop
+    i = 0
+    val = 1
+    while (true) {
+      i++
+      val *= subject 
+      val %= mod 
+      if (val === doorKey) {
+        break
+      }
+    }
+    const doorLoop = i
+
+    console.log(cardLoop, doorLoop)
+
+    // Calculate Encryption Key w/ Card Loop
+    let encryptionKey = 1
+    for (i=0; i < cardLoop; i++) {
+      encryptionKey = Maffs.multiply(encryptionKey, doorKey.toString())
+      encryptionKey = Maffs.modulo(encryptionKey, mod.toString()) 
+    }
+    console.log(encryptionKey)
+
+    // Calculate Encryption Key w/ Door Loop
+    encryptionKey = 1
+    for (i=0; i < doorLoop; i++) {
+      encryptionKey = Maffs.multiply(encryptionKey, cardKey.toString())
+      encryptionKey = Maffs.modulo(encryptionKey, mod.toString()) 
+    }
+    console.log(encryptionKey)
+    console.timeEnd("I wonder")
+    
+    setPart1(part1 + 1)
   }
 
   const solvePartTwo = () => {
