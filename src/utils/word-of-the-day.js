@@ -27,7 +27,7 @@ const wordOfTheDay = {
     1: null,
     2: {
       'word': "Agglutinate",
-      'definition': "Verb; To combine different word elements to express compound ideas",
+      'definition': "Verb; To combine different word elements to express compound ideas. More commonly, 'to glue things', but that's far less interesting",
       'origin': "From Classical Latin, the agglutination of 'ad-' (to) and 'gluten' (glue), meaning to glue",
     },
   },
