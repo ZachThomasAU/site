@@ -51,9 +51,14 @@ const wordOfTheDay = {
     },
     8: {
       'word': "Rubricate",
-      'definition': "add elaborate, typically red, capital letters or other decorations to a manuscript",
+      'definition': "Verb; Add elaborate, typically red, capital letters or other decorations to a manuscript",
       'origin': "From Classical Latin, 'rubrica', marked in red",
     },
+    9: {
+      'word': "Procrustean",
+      'definition': "Adj; Enforcing uniformity or conformity without regard to natural variation or individuality",
+      'origin': "From the Greek legend of Procrustes - a bandit who forced his victims to lie on an iron bed, regardless of their height. If they were too tall he would chop their feet off, if they were too short he would lay them on the rack to stretch them out",
+    }
   },
   7: {
     1: null,
