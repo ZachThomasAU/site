@@ -36,7 +36,7 @@ const wordOfTheDay = {
     15: {
       'word': "Vituperative",
       'definition': "Adj; Bitter and abusive",
-      'definition': "From Classical Latin, 'vituperare', to blame",
+      'origin': "From Classical Latin, 'vituperare', to blame",
     },
   },
   5: {
@@ -44,6 +44,16 @@ const wordOfTheDay = {
   },
   6: {
     1: null,
+    7: {
+      'word': "Rusticate",
+      'definition': "Verb; To suspend a student from University",
+      'origin': "From Classical Latin, 'rusticus'",
+    },
+    8: {
+      'word': "Rubricate",
+      'definition': "add elaborate, typically red, capital letters or other decorations to a manuscript",
+      'origin': "From Classical Latin, 'rubrica', marked in red",
+    },
   },
   7: {
     1: null,
