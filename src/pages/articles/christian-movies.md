@@ -1,6 +1,7 @@
 ---
-title: "14 Christian Movies That Don't Suck"
+title: "15 Christian Movies That Don't Suck"
 date: "2021-07-05"
+edited: "2021-07-06"
 ---
 
 I recently had the great pleasure of watching a number of films in the span of a 
@@ -28,16 +29,17 @@ watch.
 2. It's A Wonderful Life *(1946)*
 3. Ben Hur *(1959)*
 4. A Man For All Seasons *(1966)*
-5. The End Of The Affair *(1999)*
-6. The Hunchback of Notre Dame *(1996)*
-7. Hacksaw Ridge *(2016)*
-8. Les Misérables *(1998)*
-9. Passion of the Christ *(2004)*
-10. The Two Popes *(2019)*
-11. The Sound Of Music *(1965)*
-12. Jesus Christ Superstar *(1973)*
-13. Silence *(2016)*
-14. Book of Eli *(2010)*
+5. Spotlight *(2015)*
+6. The End Of The Affair *(1999)*
+7. The Hunchback of Notre Dame *(1996)*
+8. Hacksaw Ridge *(2016)*
+9. Les Misérables *(1998)*
+10. Passion of the Christ *(2004)*
+11. The Two Popes *(2019)*
+12. The Sound Of Music *(1965)*
+13. Jesus Christ Superstar *(1973)*
+14. Silence *(2016)*
+15. Book of Eli *(2010)*
 
 
 ## The Watchlist
@@ -52,3 +54,4 @@ that I will add to the list after watching.
 - Witness *(1985)*
 - Calvary *(2014)*
 - The Tree Of Life *(2011)*
+- Doubt *(2008)*
