@@ -1,5 +1,5 @@
 ---
-title: "15 Christian Movies That Don't Suck"
+title: "16 Christian Movies That Don't Suck"
 date: "2021-07-05"
 edited: "2021-07-06"
 ---
@@ -30,16 +30,17 @@ watch.
 3. Ben Hur *(1959)*
 4. A Man For All Seasons *(1966)*
 5. Spotlight *(2015)*
-6. The End Of The Affair *(1999)*
-7. The Hunchback of Notre Dame *(1996)*
-8. Hacksaw Ridge *(2016)*
-9. Les Misérables *(1998)*
-10. Passion of the Christ *(2004)*
-11. The Two Popes *(2019)*
-12. The Sound Of Music *(1965)*
-13. Jesus Christ Superstar *(1973)*
-14. Silence *(2016)*
-15. Book of Eli *(2010)*
+6. The Green Mile *(1999)*
+1. The End Of The Affair *(1999)*
+1. The Hunchback of Notre Dame *(1996)*
+1. Hacksaw Ridge *(2016)*
+1. Les Misérables *(1998)*
+1. Passion of the Christ *(2004)*
+1. The Two Popes *(2019)*
+1. The Sound Of Music *(1965)*
+1. Jesus Christ Superstar *(1973)*
+1. Silence *(2016)*
+1. Book of Eli *(2010)*
 
 
 ## The Watchlist
