@@ -34,6 +34,7 @@ watch.
 1. The End Of The Affair *(1999)*
 1. The Hunchback of Notre Dame *(1996)*
 1. Hacksaw Ridge *(2016)*
+1. Chariots of Fire *(1981)*
 1. Les Misérables *(1998)*
 1. Passion of the Christ *(2004)*
 1. The Two Popes *(2019)*
@@ -51,7 +52,6 @@ that I will add to the list after watching.
 - Of Gods and Men *(2010)*
 - The Last Temptation of Christ *(1988)*
 - The Crucible *(1996)*
-- Chariots of Fire *(1981)*
 - Witness *(1985)*
 - Calvary *(2014)*
 - The Tree Of Life *(2011)*
