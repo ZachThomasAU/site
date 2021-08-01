@@ -1,7 +1,7 @@
 ---
-title: "16 Christian Movies That Don't Suck"
+title: "17 Christian Movies That Don't Suck"
 date: "2021-07-05"
-edited: "2021-07-06"
+edited: "2021-08-01"
 ---
 
 I recently had the great pleasure of watching a number of films in the span of a 
@@ -27,8 +27,8 @@ watch.
 
 1. Becket *(1964)*
 2. It's A Wonderful Life *(1946)*
-3. Ben Hur *(1959)*
-4. A Man For All Seasons *(1966)*
+3. A Man For All Seasons *(1966)*
+4. Ben Hur *(1959)*
 5. Spotlight *(2015)*
 6. The Green Mile *(1999)*
 1. The End Of The Affair *(1999)*
