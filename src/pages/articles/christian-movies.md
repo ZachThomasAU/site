@@ -1,7 +1,7 @@
 ---
-title: "17 Christian Movies That Don't Suck"
+title: "18 Christian Movies That Don't Suck"
 date: "2021-07-05"
-edited: "2021-08-01"
+edited: "2021-08-31"
 ---
 
 I recently had the great pleasure of watching a number of films in the span of a 
@@ -32,6 +32,7 @@ watch.
 5. Spotlight *(2015)*
 6. The Green Mile *(1999)*
 1. The End Of The Affair *(1999)*
+1. The Crucible *(1996)*
 1. The Hunchback of Notre Dame *(1996)*
 1. Hacksaw Ridge *(2016)*
 1. Chariots of Fire *(1981)*
@@ -51,7 +52,6 @@ that I will add to the list after watching.
 - Amazing Grace *(2006)*
 - Of Gods and Men *(2010)*
 - The Last Temptation of Christ *(1988)*
-- The Crucible *(1996)*
 - Witness *(1985)*
 - Calvary *(2014)*
 - The Tree Of Life *(2011)*
