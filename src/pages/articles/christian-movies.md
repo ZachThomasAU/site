@@ -1,7 +1,7 @@
 ---
-title: "18 Christian Movies That Don't Suck"
+title: "19 Christian Movies That Don't Suck"
 date: "2021-07-05"
-edited: "2021-08-31"
+edited: "2021-09-18"
 ---
 
 I recently had the great pleasure of watching a number of films in the span of a 
@@ -28,9 +28,10 @@ watch.
 1. Becket *(1964)*
 2. It's A Wonderful Life *(1946)*
 3. A Man For All Seasons *(1966)*
-4. Ben Hur *(1959)*
-5. Spotlight *(2015)*
-6. The Green Mile *(1999)*
+4. Calvary *(2014)*
+5. Ben Hur *(1959)*
+1. Spotlight *(2015)*
+1. The Green Mile *(1999)*
 1. The End Of The Affair *(1999)*
 1. The Crucible *(1996)*
 1. The Hunchback of Notre Dame *(1996)*
@@ -53,6 +54,5 @@ that I will add to the list after watching.
 - Of Gods and Men *(2010)*
 - The Last Temptation of Christ *(1988)*
 - Witness *(1985)*
-- Calvary *(2014)*
 - The Tree Of Life *(2011)*
 - Doubt *(2008)*
