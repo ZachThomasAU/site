@@ -1,5 +1,5 @@
 :root {
-  --otherAnimations: 7800ms;
+  --otherAnimations: 6560ms;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
   font-weight: 400;
   opacity: 0;
   transform: translateY(3rem);
-  animation: fadeInUp 2s ease calc(var(--otherAnimations) + 2s) forwards;
+  animation: fadeInUp 2s ease calc(var(--otherAnimations) + 1s) forwards;
 }
 
 @keyframes fadeInUp {

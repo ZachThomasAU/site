@@ -20,7 +20,7 @@ export default function Home() {
         `}>
           <Typewriter 
           options={{
-            delay: 200,
+            delay: 160,
           }}
           onInit={(typewriter) => {
             typewriter.typeString('Hi, my name is Zach.<br/> Welcome to my site!')
