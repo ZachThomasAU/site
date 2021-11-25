@@ -26,6 +26,9 @@ export default function DayOne(data) {
       "###",
     ]
 
+    /* eslint-disable */
+    // This is bad, old code. It is generally not wise to modify these variables
+    // inside an anonymous arrow function. DO NOT REUSE. 
     let pocket = doSetup(text)
 
     let ans = 0
@@ -51,6 +54,8 @@ export default function DayOne(data) {
       }) 
       pocket = newPocket
     }
+
+    /* eslint-enable */
 
     setPart1(ans)
   }
