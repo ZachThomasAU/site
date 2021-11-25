@@ -18,8 +18,14 @@ export default {
     heading: 1.125,
   },
   colors: {
+    /* dark mode
     text: "hsl(210,50%,96%)",
     background: "#222639",
+    primary: "#b9f",
+    secondary: "#e9f",
+    muted: "#dce2e8",
+    */
+    background: "#FFFFFF",
     primary: "#b9f",
     secondary: "#e9f",
     muted: "#dce2e8",
