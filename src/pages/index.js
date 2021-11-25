@@ -1,6 +1,5 @@
 import React from "react"
 
-import Header from "../components/header"
 import SEO from "../components/seo"
 
 import Typewriter from 'typewriter-effect';
@@ -10,6 +9,7 @@ import css from "@emotion/css";
 export default function Home() {
   return (
     <body>
+      <SEO title="Welcome" />
       <div>
         <h1 css={css`
           font-size: clamp(1rem, 3vw + 1rem, 4rem);
@@ -23,7 +23,7 @@ export default function Home() {
             delay: 200,
           }}
           onInit={(typewriter) => {
-            typewriter.typeString('Hi, my name is Zach. <br/> Welcome to my site!')
+            typewriter.typeString('Hi, my name is Zach.<br/> Welcome to my site!')
             .start();
           }}
           />

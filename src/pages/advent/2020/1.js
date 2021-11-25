@@ -100,27 +100,27 @@ export default function DayOne(data) {
         Very uncharacteristically, it turns out I've decided to go on a holiday
         for Christmas. Even more uncharacteristically instead of visiting some
         highly developed tourist hotspot, or some site of ancient Western
-        Civilisation, I've decided to visit somewhere with a completely isolated
-        (possibly autarkic) non-fiat currency pegged to the gold standard. How
-        coins made out of gold are not transactable on a FOREX is unclear to me,
-        (possibly some sort of trade embargo?), when supply seems elastic (given
-        a coworker of mine has 2 such coins doing nothing in their pocket) but
-        it remains the case.
+        Civilisation, I've decided to visit a possibly autarkic rogue-state 
+        with a completely isolated non-fiat currency pegged to the gold standard. 
+        How coins made out of gold are not transactable on a FOREX is unclear to 
+        me, when supply seems elastic (given a co-worker of mine has 2 such coins 
+        doing nothing in their pocket) but it remains the case. It seems likely
+        this rogue state is under some sort of trade embargo. 
       </p>
       <p>
-        Much more characterstically, I've cocked up an expense report, and a
-        coworker in accounting (e.g. finance) has asked for help with some data
-        analysis component of their job to fix it. I'll do my job properly the
-        first time one day.
+        Much more characteristically, I've cocked up an expense report, and a
+        co-worker in accounting has asked for help with some data analysis 
+        component of their job to fix it.
       </p>
       <h2>Part One</h2>
       <p>
-        <a style={{ textShadow: "none" }} href="/advent2020/1.txt">
+        <a style={{ textShadow: "none" }} href="/advent/2020/1.txt">
           The expense report contains a list of expenses
         </a>
         , and they need me to find the product of the two expenses that sum to
-        "2020". This is pretty trivial to do. You can reveal the answer given
-        the above expense report by pressing the button below.
+        "2020". This is pretty trivial to do by iterating over the list. You can 
+        reveal the answer given the above expense report by pressing the button 
+        below.
       </p>
       <button onClick={doPartOne}>Reveal Answer to Part One</button>
       <p>Answer is: {part1}</p>
@@ -143,8 +143,8 @@ export default function DayOne(data) {
         to choose that input, and it will return the result (if any) no matter
         the number of expenses? Suppose further, you wanted to change the value
         to search for from 2020 to some other value? Enter the Expense Report
-        Calculator! Once the Advent Calender event is over, I'll allow you to
-        submit your own puzzle inputs as well.
+        Calculator! If I remember once the Advent Calender event is over, I'll 
+        allow you to submit your own puzzle inputs as well.
       </p>
       <p>
         Note: this calculator is not very well optimised, and so is{" "}
@@ -152,8 +152,8 @@ export default function DayOne(data) {
         pick a small expenses value, or a value that is actually solvable, but
         otherwise this calculator may take a long time until I either decide to
         move it over to the server to do some fancy math magic, can be assed to
-        optimise my JS spaghetti code, or just use someone elses much better
-        written combinatorics JS dependency.
+        optimise my JS spaghetti code, or just use someone else's much better
+        written combinatorics JS package.
       </p>
       <form>
         <label>

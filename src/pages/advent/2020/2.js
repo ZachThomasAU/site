@@ -15,7 +15,7 @@ import { InlineMath } from "react-katex"
  * date: "2020-12-02"
  * ---
  */
-export default function DayOne(data) {
+export default function DayTwo(data) {
   const [part1, setPart1] = useState(0)
   const [part2, setPart2] = useState(0)
   const [num1, setNum1] = useState("1")
@@ -107,7 +107,7 @@ export default function DayOne(data) {
         underpaid casual, hasn't been adequately trained, and just wants to get
         the job done without much care for the company itself. Therefore, they
         decide to do the entirely responsible thing of handing over, to me,{" "}
-        <a href="2.txt" style={{ textShadow: "none" }}>
+        <a href="/advent/2020/2.txt" style={{ textShadow: "none" }}>
           their entire password database
         </a>
         ; containing not only every employee's (and by the looks of things, past
@@ -159,9 +159,9 @@ export default function DayOne(data) {
       <p>
         So anyway, the actual policy provides two positions in the password (the
         numeric values), and demands a specific character must appear in one of
-        those positions, but not both. This is actually easier to solve for, and
-        you can reveal the answer for the provided password database by clicking
-        the button.
+        those positions, but not both. This XOR calculation is actually easier 
+        to solve for, and you can reveal the answer for the provided password 
+        database by clicking the button.
       </p>
       <button type="button" onClick={solvePartTwo}>
         Reveal Answer to Part Two
@@ -223,7 +223,7 @@ export default function DayOne(data) {
         <br />
         <label>
           Policy:
-          <select name="rule" value={rule} onBlur={handleInputChange}>
+          <select name="rule" onBlur={handleInputChange}>
             <option value="HighLow">Sled Rental Shop's Corporate Policy</option>
             <option value="XOR">Official Toboggan Corporate Policy</option>
           </select>
@@ -240,7 +240,7 @@ export default function DayOne(data) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "pages/advent2020/inputs/2.txt" }) {
+    file(relativePath: { eq: "pages/advent/2020/inputs/2.txt" }) {
       id
       childPlainText {
         content
