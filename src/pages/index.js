@@ -3,7 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 
 import Typewriter from 'typewriter-effect';
-import "../styles/subtitle.css";
+import * as styles from "../styles/subtitle.module.css";
 import css from "@emotion/css";
 
 export default function Home() {
@@ -28,7 +28,9 @@ export default function Home() {
           }}
           />
         </h1>
-        <p class='subtitle'>Continue</p>
+        <p className={styles.subtitle}>
+          <a href='/about/about/'>Continue</a>
+        </p>
       </div>
     </body>
   )

@@ -1,11 +1,9 @@
 import React from "react"
-
-import Layout from "../components/layout"
 import Header from "../components/header"
 
 export default function FourZeroFour() {
   return (
-    <Layout>
+    <body>
       <Header headerText="404 Not Found."/>
       <p>
         Damn man, this sucks. You've hit a 404 bro. This really sucks. I'm sorry
@@ -21,6 +19,6 @@ export default function FourZeroFour() {
       <p>
         No good? Damn man...this really sucks. 
       </p>
-    </Layout>
+    </body>
   )
 }

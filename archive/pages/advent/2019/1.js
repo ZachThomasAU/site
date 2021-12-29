@@ -4,10 +4,10 @@ import { BlockMath } from "react-katex"
 import { Helmet } from "react-helmet"
 
 import Layout from "../../../components/layout"
-import Header from "../../../components/header"
-import SEO from "../../../components/seo"
+import Header from "../../../../src/components/header"
+import SEO from "../../../../src/components/seo"
 
-import * as fuelCounterUpper from "../../../functions/advent/2019/fuelCounterUpper"
+import * as fuelCounterUpper from "../../../../src/functions/advent/2019/fuelCounterUpper"
 
 /**
  * ---

@@ -19,6 +19,10 @@ body {
   animation: fadeInUp 2s ease calc(var(--otherAnimations) + 1s) forwards;
 }
 
+a {
+  color: hsl(0 0% 0% / 0.7);
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
