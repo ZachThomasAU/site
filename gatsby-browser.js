@@ -1,1 +1,1 @@
-require('./src/styles/global.css')
+// This is used to require global imports

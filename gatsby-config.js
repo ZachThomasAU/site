@@ -70,6 +70,7 @@ module.exports = {
     "gatsby-plugin-emotion",
     "gatsby-plugin-offline",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sass",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
   ],

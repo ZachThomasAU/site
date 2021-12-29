@@ -1,14 +1,15 @@
 import React from "react"
-
-import SEO from "../components/seo"
+import {Link} from "gatsby"
 
 import Typewriter from 'typewriter-effect';
-import * as styles from "../styles/subtitle.module.css";
 import css from "@emotion/css";
+
+import SEO from "../components/seo";
+import "../styles/subtitle.scss";
 
 export default function Home() {
   return (
-    <body>
+    <body class='centre'>
       <SEO title="Welcome" />
       <div>
         <h1 css={css`
@@ -28,8 +29,8 @@ export default function Home() {
           }}
           />
         </h1>
-        <p className={styles.subtitle}>
-          <a href='/about/about/'>Continue</a>
+        <p class='subtitle'>
+          <Link to='/about/about' class='link'>Continue</Link>
         </p>
       </div>
     </body>

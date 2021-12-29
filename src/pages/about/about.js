@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 
 import SEO from "../../components/seo"
-import * as styles from "./about.module.css"
+import './about.scss'
 
 export default function About({ data }) {
   return (
@@ -11,6 +11,7 @@ export default function About({ data }) {
       <SEO title="About" />
       <h1>About Me</h1>
       <p>This is a site that doesn't do much for now.</p>
+      <p><a>testing...</a></p>
     </body>
   )
 }
