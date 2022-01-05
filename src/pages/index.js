@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import {Link} from "gatsby"
 
 import Typewriter from 'typewriter-effect';
@@ -8,6 +8,12 @@ import SEO from "../components/seo";
 import "../styles/subtitle.scss";
 
 export default function Home() {
+  const [continueHolder, setContinueHolder] = useState('');
+
+  function continueUpdate() {
+    setContinueHolder("My site is currently being redeveloped. \n\n Thanks for visiting though!");
+  }
+
   return (
     <body class='centre'>
       <SEO title="Welcome" />
@@ -30,8 +36,10 @@ export default function Home() {
           />
         </h1>
         <p class='subtitle'>
-          <Link to='/about/about' class='link'>Continue</Link>
+          {/*<Link to='/about/about' class='link'>Continue</Link>*/}
+          <a class='link' onClick={continueUpdate}>Continue</a>
         </p>
+        <p>{continueHolder}</p>
       </div>
     </body>
   )
